@@ -11,7 +11,7 @@ public class Leaderboard extends JFrame {
     public Leaderboard() {
 
         super(Constants.Name + " - Leaderboard");
-        setSize(Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT + 500);
+        setSize(Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT + 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
@@ -26,11 +26,14 @@ public class Leaderboard extends JFrame {
 
         JButton backButton = new JButton("Back");
         backButton.setFont(new Font("arial", Font.PLAIN, 20));
+        add(backButton, BorderLayout.SOUTH);
 
 
 
 
 
+
+        // Button actions function
         backButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 new Mainmenu();
